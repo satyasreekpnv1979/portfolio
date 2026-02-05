@@ -79,14 +79,14 @@ const Contact = () => {
 
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <FaEnvelope className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <FaEnvelope className="text-blue-400" />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Email</h4>
+                <div>
+                  <h4 className="text-lg font-medium mb-1 text-white">Email</h4>
                   <a 
                     href="mailto:satyasreekpnv@gmail.com" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-all"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     satyasreekpnv@gmail.com
                   </a>
@@ -94,14 +94,14 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <FaPhone className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <FaPhone className="text-blue-400" />
                 </div>
                 <div>
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Phone</h4>
+                  <h4 className="text-lg font-medium mb-1 text-white">Phone</h4>
                   <a 
                     href="tel:+919032798749" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     +91 9032798749
                   </a>
@@ -109,16 +109,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <FaLinkedin className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <FaLinkedin className="text-blue-400" />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">LinkedIn</h4>
+                <div>
+                  <h4 className="text-lg font-medium mb-1 text-white">LinkedIn</h4>
                   <a 
                     href="https://www.linkedin.com/in/satyasreekpnv/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     Connect on LinkedIn
                   </a>
@@ -126,16 +126,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <FaGraduationCap className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <FaGraduationCap className="text-blue-400" />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Google Scholar</h4>
+                <div>
+                  <h4 className="text-lg font-medium mb-1 text-white">Google Scholar</h4>
                   <a 
                     href="https://scholar.google.com/citations?user=3wmgrOMAAAAJ&hl=en" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     View Google Scholar Profile
                   </a>
@@ -143,16 +143,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <FaBook className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <FaBook className="text-blue-400" />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">Scopus</h4>
+                <div>
+                  <h4 className="text-lg font-medium mb-1 text-white">Scopus</h4>
                   <a 
                     href="https://www.scopus.com/authid/detail.uri?authorId=57218874914" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     View Scopus Profile
                   </a>
@@ -160,16 +160,16 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start">
-                <div className="bg-blue-900/30 p-2 sm:p-3 rounded-full mr-3 sm:mr-4 flex-shrink-0">
-                  <SiOrcid className="text-blue-400 text-base sm:text-lg" />
+                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+                  <SiOrcid className="text-blue-400" />
                 </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-base sm:text-lg font-medium mb-1 text-white">ORCID</h4>
+                <div>
+                  <h4 className="text-lg font-medium mb-1 text-white">ORCID</h4>
                   <a 
                     href="https://orcid.org/0000-0003-4567-3447" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm sm:text-base break-words"
+                    className="text-gray-300 hover:text-blue-400 transition-colors"
                   >
                     View ORCID Profile
                   </a>
