@@ -23,7 +23,6 @@ const Responsibilities = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Responsibilities</h2>
-          <div className="w-24 h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Core Responsibilities */}

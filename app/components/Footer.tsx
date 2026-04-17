@@ -36,7 +36,7 @@ const Footer = () => {
               <FaPhone size={18} className="sm:w-5 sm:h-5" />
             </Link>
             <Link 
-              href="https://www.linkedin.com/" 
+              href="https://www.linkedin.com/in/satyasreekpnv/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition-colors"

@@ -27,7 +27,7 @@ const Hero = () => {
               Professor & HOD of AI
             </h2>
             <p className="text-gray-300 mb-8 sm:mb-9 md:mb-10 text-base sm:text-lg md:text-xl leading-relaxed px-2 md:px-0">
-              With over 23 years of experience in teaching Computer Science & Engineering subjects,
+              With over 24 years of experience in teaching Computer Science & Engineering subjects,
               specializing in Artificial Intelligence, Machine Learning, and Data Mining.
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center md:justify-start">

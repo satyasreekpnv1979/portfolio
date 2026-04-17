@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dr. K P N V Satya Sree - Portfolio",
-  description: "Professor & HOD of AI with over 23 years of experience in teaching Computer Science & Engineering subjects.",
+  description: "Professor & HOD of AI with over 24 years of experience in teaching Computer Science & Engineering subjects.",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "16x16", type: "image/png" },

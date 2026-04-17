@@ -110,6 +110,14 @@ const Awards = () => {
       description: "",
       icon: "certificate",
     },
+    {
+      id: 14,
+      title: "Jyestha Acharya Award",
+      organization: "Bharat Education Excellence Award",
+      year: "2025",
+      description: "Awarded on Oct 25th 2025",
+      icon: "trophy",
+    },
   ];
 
   const getIcon = (iconType: string) => {
@@ -140,7 +148,6 @@ const Awards = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Awards & Achievements</h2>
-          <div className="w-24 h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

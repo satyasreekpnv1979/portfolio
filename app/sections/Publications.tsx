@@ -522,6 +522,143 @@ const Publications = () => {
       pages: "1481-1488",
       url: "https://iieta.org/journals/jesa/paper/10.18280/jesa.570523",
       doi: "https://doi.org/10.18280/jesa.570523"
+    },
+    {
+      id: 50,
+      title: "MSRP-TODNet: a multi-scale reinforced region wise analyser for tiny object detection",
+      journal: "BMC Journals - Springer Nature",
+      date: "30 April 2025",
+      issn: "Volume 18, Article 200 (2025)",
+      type: "Springer Nature",
+      pages: "",
+      url: "https://link.springer.com/article/10.1186/s13104-025-07263-7",
+      doi: "https://doi.org/10.1186/s13104-025-07263-7"
+    },
+    {
+      id: 51,
+      title: "Improved Security in Mobile Cloud Computing Using Modern Cryptographic Approaches",
+      journal: "Convergence of Cybersecurity and Cloud Computing",
+      date: "2025",
+      issn: "",
+      type: "Book Chapter",
+      pages: "",
+      url: "https://www.igi-global.com/chapter/improved-security-in-mobile-cloud-computing-using-modern-cryptographic-approaches/367218",
+      doi: "10.4018/979-8-3693-6859-6.ch020"
+    },
+    {
+      id: 52,
+      title: "Gen AI-Driven AI Threats: Enhancing Cyber Security in Military Cyber-Physical Systems",
+      journal: "Springer Nature Switzerland - Data Science and Big Data Analytics (IDBA 2025)",
+      date: "26 September 2025",
+      issn: "ISBN: 9783032053732",
+      type: "Springer Nature",
+      pages: "",
+      url: "https://link.springer.com/chapter/10.1007/978-3-032-05373-2_32",
+      doi: "10.1007/978-3-032-05373-2_32"
+    },
+    {
+      id: 53,
+      title: "Gen AI-Driven AI Threats: Enhancing Cyber Security in Military Cyber-Physical Systems",
+      journal: "5th International Conference On ICTBIG-IEEE Conference",
+      date: "27-28 June 2025",
+      issn: "",
+      type: "IEEE Conference",
+      pages: "",
+      url: "https://www.researchgate.net/publication/396077056_Gen_AI-Driven_AI_Threats_Enhancing_Cyber_Security_in_Military_Cyber-Physical_Systems",
+      doi: "10.1007/978-3-032-05373-2_32"
+    },
+    {
+      id: 54,
+      title: "Facial Emotional Detection Using Artificial Neural Networks",
+      journal: "Technische Sicherheit (Technical Security)",
+      date: "Feb 2024",
+      issn: "1434-9728",
+      type: "UGC",
+      pages: "165-177",
+      url: "https://technikwissen.eu/volume-24-issue-2-2024/",
+      doi: "22.8342.TSJ.2024.V24.2.01264"
+    },
+    {
+      id: 55,
+      title: "Smart Grid Management Using Machine Learning",
+      journal: "Journal of Nonlinear Analysis and Optimization",
+      date: "2025",
+      issn: "1906-9685 Vol. 16, Issue 1",
+      type: "UGC",
+      pages: "",
+      url: ""
+    },
+    {
+      id: 56,
+      title: "Deep Learning-Driven Early Diagnosis of Respiratory Diseases using CNN-RNN Fusion on Lung Sound Data",
+      journal: "Scientific Reports",
+      date: "24 November 2025",
+      issn: "Article number: 45233 (2025)",
+      type: "SCIE + Scopus",
+      pages: "",
+      url: "https://link.springer.com/article/10.1038/s41598-025-28832-7",
+      doi: "https://doi.org/10.1038/s41598-025-28832-7"
+    },
+    {
+      id: 57,
+      title: "Energy-Efficient Cluster-Based Routing in Wireless Sensor Networks Using Resilient Honey Badger Optimization Algorithm",
+      journal: "Proceedings of Sixth International Conference on Computer and Communication Technologies: IC3T 2024",
+      date: "2025",
+      issn: "Volume 2",
+      type: "Springer Nature",
+      pages: "387",
+      url: "https://link.springer.com/chapter/10.1007/978-981-96-7477-0_34"
+    },
+    {
+      id: 58,
+      title: "Deep learning-based ovarian cancer detection from histopathology images",
+      journal: "Quality & Quantity - International Journal of Methodology",
+      date: "2026",
+      issn: "Volume 60",
+      type: "Springer Nature",
+      pages: "1529-1543",
+      url: "https://link.springer.com/article/10.1007/s11135-025-02315-3",
+      doi: "10.1007/s11135-025-02315-3"
+    },
+    {
+      id: 59,
+      title: "AI-Based Forecasting for Hospital Bed Capacity Planning: ML and DL Applications in Public Healthcare",
+      journal: "IAENG International Journal of Computer Science",
+      date: "2026",
+      issn: "1819-656X",
+      type: "Journal",
+      pages: "Vol 53, Issue 2, p782",
+      url: "https://openurl.ebsco.com/EPDB%3Agcd%3A7%3A36397911/detailv2?sid=ebsco%3Aplink%3Ascholar&id=ebsco%3Agcd%3A191342907&crl=c&link_origin=scholar.google.com"
+    },
+    {
+      id: 60,
+      title: "Resilient Honey Badger Optimization Algorithm",
+      journal: "Sixth International Conference on Computer and Communication Technologies: IC3T 2024",
+      date: "14 October 2025",
+      issn: "Volume 2",
+      type: "Conference Publication",
+      pages: "388-400",
+      url: "https://books.google.co.in/books?hl=en&lr=&id=4HCPEQAAQBAJ&oi=fnd&pg=PA387"
+    },
+    {
+      id: 61,
+      title: "SUPER PRODUCTIVE: SEAMLESS PROJECT MANAGEMENT TOOL",
+      journal: "Journal of Nonlinear Analysis and Optimization",
+      date: "2025",
+      issn: "1906-9685 Vol. 16, Issue 1",
+      type: "UGC",
+      pages: "",
+      url: "https://jnao-nu.com/Vol.%2016,%20Issue.%2001,%20January-June%20:%202025/46_online.pdf"
+    },
+    {
+      id: 62,
+      title: "SUPER PRODUCTIVE: SEAMLESS PROJECT MANAGEMENT TOOL",
+      journal: "Journal of Nonlinear Analysis and Optimization",
+      date: "2025",
+      issn: "1906-9685 Vol. 16, Issue 1",
+      type: "UGC",
+      pages: "",
+      url: "https://jnao-nu.com/Vol.%2016,%20Issue.%2001,%20January-June%20:%202025/46_online.pdf"
     }
   ];
 
@@ -557,7 +694,6 @@ const Publications = () => {
               <FaFilePdf /> View Full List
             </button>
           </div>
-          <div className="w-24 h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Search Bar */}

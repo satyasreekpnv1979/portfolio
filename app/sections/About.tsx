@@ -15,7 +15,6 @@ const About = () => {
           className="text-center mb-12 sm:mb-14 md:mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">About Me</h2>
-          <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-blue-600 mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
@@ -32,12 +31,12 @@ const About = () => {
             </div>
             <p className="text-gray-700 mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed">
               I am Dr. K P N V Satya Sree, a Professor and Head of Department for Artificial Intelligence
-              at Usha Rama College of Engineering and Technology. With over 23 years of experience in the
+              at Usha Rama College of Engineering and Technology. With over 24 years of experience in the
               teaching field, I have developed expertise in various Computer Science & Engineering subjects.
             </p>
             <p className="text-gray-700 mb-4 sm:mb-5 md:mb-6 text-sm sm:text-base md:text-lg leading-relaxed">
               My areas of specialization include Artificial Intelligence and Neural Networks, Computer Vision,
-              Machine Learning, Deep Learning Techniques, Cyber Security, Block Chain & Technology, IoT, Data Warehousing & Data Mining,
+              Machine Learning, Deep Learning Techniques, Cyber Security, IoT, Data Warehousing & Data Mining,
               and Advanced Operating Systems.
             </p>
             <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
@@ -61,7 +60,7 @@ const About = () => {
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li><span className="font-medium">Name:</span> <span className="text-base">K P N V Satya Sree</span></li>
-                <li className="text-lg"><span className="font-medium">Age:</span> 46</li>
+                <li className="text-lg"><span className="font-medium">Age:</span> 47</li>
                 <li className="text-lg"><span className="font-medium">Nationality:</span> Indian</li>
                 <li className="text-lg"><span className="font-medium">Location:</span> India</li>
               </ul>
@@ -86,12 +85,13 @@ const About = () => {
               </div>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li>Artificial Intelligence</li>
+                <li>Neural Networks</li>
                 <li>Machine Learning</li>
                 <li>Deep Learning</li>
-                <li>Data Mining</li>
                 <li>Computer Vision</li>
-                <li>Computer Organisation</li>
-                <li>Operating System</li>
+                <li>Cyber Security</li>
+                <li>IoT</li>
+                <li>Data Mining</li>
               </ul>
             </div>
 

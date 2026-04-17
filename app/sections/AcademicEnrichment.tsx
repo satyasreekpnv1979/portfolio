@@ -95,6 +95,12 @@ const AcademicEnrichment = () => {
           title: "Large Language Models in Artificial Intelligence",
           organizer: "Andhra Pradesh Information Technology Academy & Blackbuck Engineers Pvt Ltd",
           date: "04 Oct 2023 - 07 Oct 2023"
+        },
+        {
+          id: 8,
+          title: "Research Proposal Writing and AI Tools in Education and Research",
+          organizer: "ISTE Sponsored Programme at Department of Artificial Intelligence and Data Science, P. R. Pote Patil College of Engineering & Management, Amravati",
+          date: "06/05/2024 to 11/05/2024"
         }
       ],
       fdp: [
@@ -169,6 +175,42 @@ const AcademicEnrichment = () => {
           title: "AI and Quantum Computing: The Future of Intelligent System",
           organizer: "BHARAT INSTITUTE OF ENGINEERING AND TECHNOLOGY",
           date: "Dec 9th - 14th 2024"
+        },
+        {
+          id: 10,
+          title: "AI in Quantum, Photonics, Nanotechnology and Intelligent Signal Processing",
+          organizer: "Vijaya Institute of Technology For Women",
+          date: "Dec 1st - 06th 2025"
+        },
+        {
+          id: 11,
+          title: "Quantum Technology - A Transformative Approach to Next-Generation Computing",
+          organizer: "Sindhudurg Saiksan Prasarak Mandal&apos;s College of Engineering",
+          date: "Dec 8th - 13th 2025"
+        },
+        {
+          id: 12,
+          title: "Quantum Computing & Cyber Security",
+          organizer: "S-Vysya Deemed to be University (School of Advanced Studies)",
+          date: "Dec 15th - 20th 2025"
+        },
+        {
+          id: 13,
+          title: "Emerging Research Trends in SuperComputing AI and Data Science",
+          organizer: "Amity University Rajasthan",
+          date: "Dec 24th - 30th 2025"
+        },
+        {
+          id: 14,
+          title: "Quantum Computing (QT - 00 & 01 Series)",
+          organizer: "E&ICT and APSCHE",
+          date: "40 hours"
+        },
+        {
+          id: 15,
+          title: "Foundations of Quantum Computing and Applications (QT - 05)",
+          organizer: "E&ICT and APSCHE",
+          date: "40 hours"
         }
       ]
     }
@@ -185,7 +227,6 @@ const AcademicEnrichment = () => {
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">Academic Enrichment</h2>
-          <div className="w-16 sm:w-20 md:w-24 h-1 sm:h-1.5 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         {/* Coordinated Workshops Section */}

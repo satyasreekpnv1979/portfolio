@@ -59,7 +59,6 @@ const Contact = () => {
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white px-2">Contact Me</h2>
-          <div className="w-16 sm:w-18 md:w-20 h-0.5 sm:h-1 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">

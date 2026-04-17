@@ -60,7 +60,6 @@ const Experience = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Work Experience</h2>
-          <div className="w-20 h-1 bg-blue-400 mx-auto"></div>
         </motion.div>
 
         <div className="relative">
@@ -118,28 +117,22 @@ const Experience = () => {
         >
           <div className="bg-gray-800/75 backdrop-blur-sm p-8 rounded-3xl shadow-md">
             <h3 className="text-2xl font-semibold text-white mb-6 text-center">Professional Journey Overview</h3>
-            <div className="text-gray-300 leading-relaxed space-y-4">
-              <p>
-                Throughout my 23+ years of academic career, I have been dedicated to excellence in teaching Computer Science & Engineering subjects, 
-                with a special focus on Artificial Intelligence, Machine Learning, and emerging technologies. My journey began as a Lecturer and 
-                progressively advanced to Professor and Head of Department positions.
-              </p>
-              <p>
-                During my tenure at various prestigious institutions, I have consistently contributed to curriculum development, research initiatives, 
-                and student mentorship. My experience spans across multiple colleges, allowing me to adapt to different academic environments and 
-                contribute to the growth of Computer Science education in the region.
-              </p>
-              <p>
-                Key contributions include developing innovative teaching methodologies for AI and ML subjects, supervising research projects, 
-                publishing academic papers, and fostering industry-academia collaborations. I have also been actively involved in academic 
-                administration, program accreditation, and faculty development initiatives.
-              </p>
-              <p>
-                My commitment to staying current with technological advancements has enabled me to introduce cutting-edge topics like Deep Learning, 
-                Computer Vision, Cyber Security, Blockchain Technology, and IoT into the academic curriculum, preparing students for the evolving 
-                demands of the technology industry.
-              </p>
-            </div>
+            <ul className="text-gray-300 leading-relaxed space-y-3 list-disc pl-6 marker:text-blue-400">
+              <li>
+                Throughout my 24+ years of academic career, I have been dedicated to excellence in teaching Computer Science & Engineering subjects,
+                with a special focus on Artificial Intelligence, Machine Learning, and emerging technologies.
+              </li>
+              <li>
+                My journey began as a Lecturer and progressively advanced to Professor and Head of Department positions across reputed institutions.
+              </li>
+              <li>
+                Major contributions include curriculum development, research supervision, publication support, and strengthening industry-academia collaboration.
+              </li>
+              <li>
+                I consistently integrate emerging topics such as Deep Learning, Computer Vision, Cyber Security, Blockchain, and IoT into the curriculum
+                to prepare students for evolving technology demands.
+              </li>
+            </ul>
           </div>
         </motion.div>
       </div>
