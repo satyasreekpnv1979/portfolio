@@ -15,6 +15,8 @@ import Contact from "./sections/Contact";
 import Nptel from "./sections/Nptel";
 import DotPattern from "./components/DotPattern";
 import AcademicEnrichment from "./sections/AcademicEnrichment";
+import Patents from "./sections/Patents";
+import ProfessionalProfile from "./sections/ProfessionalProfile";
 import ScrollBehavior from "./components/ScrollBehavior";
 
 export default function Home() {
@@ -117,10 +119,20 @@ export default function Home() {
         <DotPattern isDark={true} />
         <Awards />
       </div>
+
+      <div className="relative bg-gray-100">
+        <DotPattern isDark={false} />
+        <Patents />
+      </div>
       
       <div className="relative bg-gray-100">
         <DotPattern isDark={false} />
         <AcademicEnrichment />
+      </div>
+
+      <div className="relative bg-gray-100">
+        <DotPattern isDark={false} />
+        <ProfessionalProfile />
       </div>
       
       <div className="bg-gray-100">

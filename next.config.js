@@ -3,7 +3,7 @@ const nextConfig = {
   outputFileTracingRoot: __dirname,
   reactStrictMode: true,
   experimental: {
-    optimizePackageImports: ['framer-motion', 'react-icons'],
+    devtoolSegmentExplorer: false,
   },
   devIndicators: {
     position: 'bottom-right',

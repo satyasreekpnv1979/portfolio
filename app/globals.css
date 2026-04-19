@@ -41,6 +41,15 @@ body {
   * {
     overflow-x: hidden !important;
   }
+
+  /* Keep Professional Profile as a single page flow on mobile (no inner section scroll). */
+  #professional-profile,
+  #professional-profile > div,
+  #professional-profile .break-inside-avoid {
+    overflow-y: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
   
   html, body {
     overflow-x: hidden !important;

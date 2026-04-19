@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { FaCertificate, FaMedal, FaStar } from "react-icons/fa";
 
@@ -155,12 +157,12 @@ const Nptel = () => {
               viewport={{ once: true }}
               className="bg-gray-800/75 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="flex items-start gap-4">
-                <div className="text-2xl mt-1">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="text-2xl mt-1 shrink-0">
                   {getGradeIcon(course.grade)}
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{course.title}</h3>
+                <div className="min-w-0">
+                  <h3 className="text-lg font-semibold text-white mb-2 wrap-break-word">{course.title}</h3>
                   <div className="space-y-1 text-sm text-gray-300">
                     <p><span className="font-medium text-gray-200">Duration:</span> {course.duration}</p>
                     <p><span className="font-medium text-gray-200">Date:</span> {course.date}</p>

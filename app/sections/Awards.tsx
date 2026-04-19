@@ -161,9 +161,9 @@ const Awards = () => {
               className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-6 relative overflow-hidden group hover:shadow-xl transition-shadow"
             >
               <div className="relative z-10">
-                <div className="flex items-start mb-4">
-                  <div className="mr-4 mt-1">{getIcon(award.icon)}</div>
-                  <div>
+                <div className="flex flex-nowrap items-start gap-3 sm:gap-4 mb-4">
+                  <div className="shrink-0 mt-1">{getIcon(award.icon)}</div>
+                  <div className="min-w-0">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{award.title}</h3>
                     <p className="text-gray-600 mb-1">{award.organization}</p>
                     <p className="text-blue-500 font-medium">{award.year}</p>
