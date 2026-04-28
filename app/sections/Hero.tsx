@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import Link from "next/link";
 import { useState } from "react";
 import { FaArrowDown } from "react-icons/fa";
 import DotPattern from "../components/DotPattern";
 
 const Hero = () => {
+  const motionProps = useCardMotion();
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -15,10 +17,9 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12">
           <motion.div 
+            {...motionProps}
             className="md:w-1/2 text-center md:text-left"
-            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-tight">
               Dr. K P N V <span className="text-blue-400">Satya Sree</span>
@@ -44,10 +45,9 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.div 
+            {...motionProps}
             className="md:w-1/2 flex justify-center mt-6 sm:mt-7 md:mt-8 lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px] rounded-full overflow-hidden border-4 border-blue-400 shadow-2xl">
               {!imageError ? (
@@ -80,11 +80,10 @@ const Hero = () => {
       </div>
       <div className="mt-auto mb-2 justify-center hidden md:flex">
         <motion.a 
+          {...motionProps}
           href="#about"
           className="text-gray-300 hover:text-blue-400 transition-colors"
-          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
           aria-label="Scroll to About section"
         >
           <FaArrowDown className="animate-bounce text-2xl" />
@@ -95,3 +94,5 @@ const Hero = () => {
 };
 
 export default Hero; 
+
+

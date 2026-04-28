@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaEnvelope, FaPhone, FaLinkedin, FaGraduationCap, FaBook } from "react-icons/fa";
 import { SiOrcid } from "react-icons/si";
 
 const Contact = () => {
+  const motionProps = useCardMotion();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -52,22 +54,16 @@ const Contact = () => {
     <section id="contact" className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-14 md:pb-16 bg-gray-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white px-2">Contact Me</h2>
+          <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-white px-2">Contact Me</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="mx-2 sm:mx-0"
           >
             <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-5 md:mb-6 text-white">Get In Touch</h3>
@@ -77,100 +73,100 @@ const Contact = () => {
             </p>
 
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <FaEnvelope className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">Email</h4>
                   <a 
                     href="mailto:satyasreekpnv@gmail.com" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
                     satyasreekpnv@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <FaPhone className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">Phone</h4>
                   <a 
                     href="tel:+919032798749" 
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
                     +91 9032798749
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <FaLinkedin className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">LinkedIn</h4>
                   <a 
                     href="https://www.linkedin.com/in/satyasreekpnv/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
-                    Connect on LinkedIn
+                    https://www.linkedin.com/in/satyasreekpnv/
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <FaGraduationCap className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">Google Scholar</h4>
                   <a 
                     href="https://scholar.google.com/citations?user=3wmgrOMAAAAJ&hl=en" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
-                    View Google Scholar Profile
+                    https://scholar.google.com/citations?user=3wmgrOMAAAAJ&hl=en
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <FaBook className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">Scopus</h4>
                   <a 
                     href="https://www.scopus.com/authid/detail.uri?authorId=57218874914" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
-                    View Scopus Profile
+                    https://www.scopus.com/authid/detail.uri?authorId=57218874914
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="bg-blue-900/30 p-3 rounded-full mr-4">
+              <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
+                <div className="bg-blue-900/30 p-3 rounded-full shrink-0">
                   <SiOrcid className="text-blue-400" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-medium mb-1 text-white">ORCID</h4>
                   <a 
                     href="https://orcid.org/0000-0003-4567-3447" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover:text-blue-400 transition-colors break-all text-sm sm:text-base"
                   >
-                    View ORCID Profile
+                    https://orcid.org/0000-0003-4567-3447
                   </a>
                 </div>
               </div>
@@ -179,10 +175,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
+            {...motionProps}
           >
             <h3 className="text-2xl font-semibold mb-6 text-white">Send Me a Message</h3>
             
@@ -280,3 +273,5 @@ const Contact = () => {
 };
 
 export default Contact; 
+
+

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import {
   FaBookOpen,
   FaCheckCircle,
@@ -17,6 +18,7 @@ type ScholarDetails = {
 };
 
 const PhDGuidance = () => {
+  const motionProps = useCardMotion();
   const phd = {
     totalGuiding: "2",
     period: "2016 to 2023",
@@ -76,10 +78,7 @@ const PhDGuidance = () => {
     <section id="phd-guidance" className="pt-24 pb-20 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">PhD Guidance</h2>
@@ -87,10 +86,7 @@ const PhDGuidance = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="lg:col-span-7"
           >
             <div className="bg-white/75 backdrop-blur-sm rounded-2xl shadow-lg p-6 sm:p-8 h-full">
@@ -109,19 +105,16 @@ const PhDGuidance = () => {
                   </span>
                 </div>
 
-                <div className="relative pl-6 sm:pl-8">
-                  <div className="absolute left-[9px] sm:left-[11px] top-0 bottom-0 w-[2px] bg-blue-200"></div>
+                <div className="relative pl-0 md:pl-6 lg:pl-8">
+                  <div className="hidden md:block absolute left-2.25 lg:left-2.75 top-0 bottom-0 w-0.5 bg-blue-200"></div>
 
-                  {scholars.map((scholar, index) => (
+                  {scholars.map((scholar) => (
                     <motion.div
+                      {...motionProps}
                       key={scholar.id}
-                      initial={{ opacity: 0, y: 14 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.35, delay: index * 0.08 }}
-                      viewport={{ once: true }}
                       className="relative mb-6 last:mb-0"
                     >
-                      <div className="absolute -left-6 sm:-left-8 top-4 w-5 h-5 rounded-full bg-white border-4 border-blue-400"></div>
+                      <div className="hidden md:block absolute -left-6 lg:-left-8 top-4 w-5 h-5 rounded-full bg-white border-4 border-blue-400"></div>
 
                       <div className={`${scholar.accent} rounded-2xl p-5 sm:p-6 shadow-sm`}>
                         <div className="flex items-center justify-between gap-2 mb-3">
@@ -150,10 +143,7 @@ const PhDGuidance = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="lg:col-span-5 space-y-6"
           >
             <div className="bg-white/75 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-6 sm:p-7">
@@ -170,11 +160,8 @@ const PhDGuidance = () => {
               <ul className="space-y-4">
                 {phd.monograms.map((monogram, index) => (
                   <motion.li
+                    {...motionProps}
                     key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                    viewport={{ once: true }}
                     className="flex items-start gap-4 rounded-2xl bg-gray-50 border border-gray-200 px-4 py-3"
                   >
                     <span className="min-w-8 h-8 rounded-full bg-blue-500 text-white text-sm font-semibold flex items-center justify-center shadow-sm">
@@ -205,3 +192,5 @@ const PhDGuidance = () => {
 };
 
 export default PhDGuidance; 
+
+

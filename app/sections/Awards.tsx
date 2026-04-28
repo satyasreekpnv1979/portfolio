@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaTrophy, FaMedal, FaCertificate } from "react-icons/fa";
 import AwardsPattern from "../components/AwardsPattern";
 
 const Awards = () => {
+  const motionProps = useCardMotion();
   const awards = [
     {
       id: 1,
@@ -141,23 +143,17 @@ const Awards = () => {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Awards & Achievements</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {awards.map((award, index) => (
+          {awards.map((award) => (
             <motion.div
+              {...motionProps}
               key={award.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-6 relative overflow-hidden group hover:shadow-xl transition-shadow"
             >
               <div className="relative z-10">
@@ -182,3 +178,5 @@ const Awards = () => {
 };
 
 export default Awards; 
+
+

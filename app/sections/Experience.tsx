@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaBriefcase, FaBuilding, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Experience = () => {
+  const motionProps = useCardMotion();
   const experiences = [
     {
       id: 1,
@@ -53,13 +55,10 @@ const Experience = () => {
     <section id="experience" className="pt-24 pb-16 bg-gray-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Work Experience</h2>
+          <h2 className="text-4xl md:text-4xl font-bold mb-4 text-white">Work Experience</h2>
         </motion.div>
 
         <div className="relative">
@@ -69,11 +68,8 @@ const Experience = () => {
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
+                {...motionProps}
                 key={exp.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="relative"
               >
                 <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
@@ -109,10 +105,7 @@ const Experience = () => {
 
         {/* Single description block for all positions */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="mt-16"
         >
           <div className="bg-gray-800/75 backdrop-blur-sm p-8 rounded-3xl shadow-md">
@@ -141,3 +134,5 @@ const Experience = () => {
 };
 
 export default Experience; 
+
+

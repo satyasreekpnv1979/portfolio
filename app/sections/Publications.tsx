@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaBook, FaSearch, FaExternalLinkAlt, FaFilePdf, FaTimes } from "react-icons/fa";
 
 const Publications = () => {
+  const motionProps = useCardMotion();
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [showPdfViewer, setShowPdfViewer] = useState(false);
@@ -678,10 +680,7 @@ const Publications = () => {
     <section id="publications" className="pt-24 pb-16 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
           <div className="flex justify-between items-center mb-6">
@@ -718,11 +717,8 @@ const Publications = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {currentPublications.map((pub) => (
             <motion.div
+              {...motionProps}
               key={pub.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: pub.id % 5 * 0.1 }}
-              viewport={{ once: true }}
               className="bg-gray-800/85 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col h-full">
@@ -814,3 +810,5 @@ const Publications = () => {
 };
 
 export default Publications; 
+
+

@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaUserTie } from "react-icons/fa";
 
 const Responsibilities = () => {
+  const motionProps = useCardMotion();
   const responsibilities = [
     "To provide students with a systematic understanding of the principles and technologies which underpin the discipline of computer science.",
     "To give students practical skills in central areas of computing, such that graduates will be able to find productive employment in the computing and computer-related industries.",
@@ -16,10 +18,7 @@ const Responsibilities = () => {
     <section id="responsibilities" className="pt-24 pb-16 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Responsibilities</h2>
@@ -27,10 +26,7 @@ const Responsibilities = () => {
 
         {/* Core Responsibilities */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
         >
           <div className="flex items-center mb-8">
             <FaUserTie className="text-blue-400 text-2xl mr-3" />
@@ -40,11 +36,8 @@ const Responsibilities = () => {
             <ul className="space-y-4">
               {responsibilities.map((responsibility, index) => (
                 <motion.li
+                  {...motionProps}
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className="flex items-start"
                 >
                   <span className="text-blue-400 mr-3 mt-1.5">•</span>
@@ -60,3 +53,5 @@ const Responsibilities = () => {
 };
 
 export default Responsibilities; 
+
+

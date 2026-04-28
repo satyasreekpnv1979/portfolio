@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaCertificate, FaMedal, FaStar } from "react-icons/fa";
 
 const Nptel = () => {
+  const motionProps = useCardMotion();
   const courses = [
     {
       id: 1,
@@ -138,23 +140,17 @@ const Nptel = () => {
     <section id="nptel" className="pt-24 pb-16 bg-gray-900 text-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">NPTEL Certifications</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-6 text-white">NPTEL Certifications</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
             <motion.div
+              {...motionProps}
               key={course.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: course.id % 9 * 0.1 }}
-              viewport={{ once: true }}
               className="bg-gray-800/75 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-nowrap items-start gap-3 sm:gap-4">
@@ -182,3 +178,5 @@ const Nptel = () => {
 };
 
 export default Nptel; 
+
+

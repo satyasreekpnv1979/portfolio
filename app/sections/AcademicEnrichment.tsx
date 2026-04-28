@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaChalkboardTeacher, FaProjectDiagram, FaGraduationCap } from "react-icons/fa";
 
 const AcademicEnrichment = () => {
+  const motionProps = useCardMotion();
   const workshops = {
     coordinated: [
       {
@@ -220,22 +222,16 @@ const AcademicEnrichment = () => {
     <section id="academic-enrichment" className="pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-14 md:pb-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">Academic Enrichment</h2>
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">Academic Enrichment</h2>
         </motion.div>
 
         {/* Coordinated Workshops Section */}
         <div className="mb-12 sm:mb-14 md:mb-16">
           <motion.h3
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
             <FaChalkboardTeacher className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
@@ -244,11 +240,8 @@ const AcademicEnrichment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.coordinated.map((workshop) => (
               <motion.div
+                {...motionProps}
                 key={workshop.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                viewport={{ once: true }}
                 className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
                 <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{workshop.title}</h4>
@@ -275,10 +268,7 @@ const AcademicEnrichment = () => {
         {/* AICTE Funded Projects Section */}
         <div className="mb-12 sm:mb-14 md:mb-16">
           <motion.h3
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
             <FaProjectDiagram className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
@@ -287,11 +277,8 @@ const AcademicEnrichment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.aicteProjects.map((project) => (
               <motion.div
+                {...motionProps}
                 key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-                viewport={{ once: true }}
                 className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
                 <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{project.title}</h4>
@@ -306,10 +293,7 @@ const AcademicEnrichment = () => {
         {/* Workshops Attended Section */}
         <div>
           <motion.h3
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="text-lg sm:text-xl md:text-2xl font-bold mb-6 sm:mb-7 md:mb-8 text-gray-800 flex items-center px-2"
           >
             <FaGraduationCap className="text-blue-500 mr-2 sm:mr-3 text-lg sm:text-xl" />
@@ -322,11 +306,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.sttp.map((sttp) => (
                 <motion.div
+                  {...motionProps}
                   key={sttp.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  viewport={{ once: true }}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{sttp.title}</h5>
@@ -343,11 +324,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.fdp.map((fdp) => (
                 <motion.div
+                  {...motionProps}
                   key={fdp.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  viewport={{ once: true }}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{fdp.title}</h5>
@@ -364,11 +342,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.atal.map((atal) => (
                 <motion.div
+                  {...motionProps}
                   key={atal.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                  viewport={{ once: true }}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{atal.title}</h5>
@@ -385,3 +360,5 @@ const AcademicEnrichment = () => {
 };
 
 export default AcademicEnrichment; 
+
+

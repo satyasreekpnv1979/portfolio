@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import {
   FaCertificate,
   FaEdit,
@@ -86,7 +87,41 @@ const positionsPreviouslyHeld = [
   "Acted as an Academic Project Coordinator at VNITSW.",
 ];
 
+const urlPattern = /(https?:\/\/[^\s)]+)|(www\.[^\s)]+)/g;
+
+const renderTextWithLinks = (text: string) => {
+  const parts = text.split(urlPattern);
+
+  return parts.map((part, index) => {
+    if (!part) {
+      return null;
+    }
+
+    const normalizedUrl = part.startsWith("www.") ? `https://${part}` : part;
+    const isUrl = urlPattern.test(part);
+
+    urlPattern.lastIndex = 0;
+
+    if (isUrl) {
+      return (
+        <a
+          key={`${part}-${index}`}
+          href={normalizedUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="break-all text-blue-700 underline decoration-blue-300 underline-offset-2 hover:text-blue-900"
+        >
+          {part}
+        </a>
+      );
+    }
+
+    return <span key={`${part}-${index}`}>{part}</span>;
+  });
+};
+
 const ProfessionalProfile = () => {
+  const motionProps = useCardMotion();
   return (
     <section
       id="professional-profile"
@@ -94,23 +129,17 @@ const ProfessionalProfile = () => {
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-8 sm:mb-10 md:mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-gray-900 px-2">
             Professional Profile
           </h2>
         </motion.div>
 
         <div className="md:columns-2 xl:columns-3 gap-x-4 sm:gap-x-5 md:gap-x-6 overflow-visible">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -119,19 +148,16 @@ const ProfessionalProfile = () => {
             </h3>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {memberships.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.05 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -140,19 +166,16 @@ const ProfessionalProfile = () => {
             </h3>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {editorialBoardRoles.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.1 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -161,19 +184,16 @@ const ProfessionalProfile = () => {
             </h3>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {conferenceAndReviewerRoles.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.15 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -182,19 +202,16 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {workshopsCoordinated.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -203,19 +220,16 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {refresherCourses.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.05 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -224,19 +238,16 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {reviewerActivities.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.1 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -245,19 +256,16 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {positionsHeld.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.1 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -266,19 +274,16 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {technicalAcademicActivities.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: 0.15 }}
-            viewport={{ once: true }}
+            {...motionProps}
             className="break-inside-avoid mb-4 sm:mb-5 md:mb-6 bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-0"
           >
             <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-800 flex items-center gap-2">
@@ -287,9 +292,9 @@ const ProfessionalProfile = () => {
             </h4>
             <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base text-gray-700 leading-relaxed">
               {positionsPreviouslyHeld.map((item, index) => (
-                <li key={index} className="flex items-start gap-0 sm:gap-2 leading-relaxed">
-                  <span className="hidden sm:inline text-blue-500 shrink-0 mt-1">•</span>
-                  <span className="min-w-0 wrap-break-word">{item}</span>
+                <li key={index} className="flex items-start gap-2 leading-relaxed">
+                  <span className="text-blue-500 shrink-0 mt-1">•</span>
+                  <span className="min-w-0 wrap-break-word mobile-summary-text">{renderTextWithLinks(item)}</span>
                 </li>
               ))}
             </ul>
@@ -301,6 +306,8 @@ const ProfessionalProfile = () => {
 };
 
 export default ProfessionalProfile;
+
+
 
 
 

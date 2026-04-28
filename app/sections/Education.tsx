@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCardMotion } from "../components/useCardMotion";
 import { FaGraduationCap, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 
 const Education = () => {
+  const motionProps = useCardMotion();
   const educations = [
     {
       id: 1,
@@ -43,23 +45,17 @@ const Education = () => {
     <section id="education" className="pt-24 pb-16 bg-gray-100 text-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          {...motionProps}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
+          <h2 className="text-4xl md:text-4xl font-bold mb-4">Education</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {educations.map((edu, index) => (
+          {educations.map((edu) => (
             <motion.div
+              {...motionProps}
               key={edu.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
               className="bg-white/75 backdrop-blur-sm p-6 rounded-3xl shadow-md"
             >
               <div className="flex items-center mb-4">
@@ -87,3 +83,5 @@ const Education = () => {
 };
 
 export default Education; 
+
+

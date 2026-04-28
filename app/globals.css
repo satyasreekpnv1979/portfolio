@@ -59,18 +59,19 @@ body {
     overflow-y: auto !important;
     scroll-behavior: smooth !important;
   }
+
+  main,
+  section,
+  section > div {
+    overflow-y: visible !important;
+  }
   
   body {
     position: relative;
     overflow-y: auto !important;
     scroll-behavior: smooth !important;
-    touch-action: manipulation;
-  }
-
-  /* Enable momentum scrolling on iOS */
-  .main-content {
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
   }
   
   /* Force hide timeline and view full list elements on all mobile devices */
@@ -79,6 +80,21 @@ body {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;
+  }
+
+  .mobile-summary-text {
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-summary-text {
+    display: block;
+    overflow: visible;
   }
 }
 
@@ -188,35 +204,19 @@ div[style*="position: fixed"][style*="bottom: 0"][style*="right: 0"] {
     max-height: 1.5rem !important;
   }
   
-  /* Fix flex layouts for mobile portrait */
-  .flex {
-    align-items: flex-start !important;
-    flex-wrap: wrap !important;
-  }
-  
-  .flex.items-center {
-    align-items: center !important;
-  }
-  
-  .flex.items-start {
-    align-items: flex-start !important;
-  }
-  
-  /* Ensure proper spacing for icon containers */
-  .bg-blue-900\/30, .rounded-full {
-    min-width: 2.5rem !important;
-    min-height: 2.5rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
   /* Ensure text doesn't overflow in mobile portrait */
   h1, h2, h3, h4, h5, h6, p, span, div, a {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
     hyphens: auto !important;
     line-height: 1.4 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    text-wrap: balance;
   }
   
   /* Card layouts for mobile portrait */

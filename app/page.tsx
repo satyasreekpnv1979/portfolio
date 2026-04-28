@@ -75,67 +75,67 @@ export default function Home() {
       <Navbar />
       
       {/* Hero section with dark background */}
-      <div className="relative bg-gray-900 text-gray-100">
+      <div className="relative bg-gray-900 text-gray-100 mb-3 md:mb-0">
         <Hero />
       </div>
       
       {/* Alternating section backgrounds with increased spacing */}
-      <div className="relative bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
         <DotPattern isDark={false} />
         <About />
       </div>
       
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900 mb-3 md:mb-0">
         <DotPattern isDark={true} />
         <Experience />
       </div>
       
-      <div className="relative bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
         <DotPattern isDark={false} />
         <Education />
       </div>
       
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900 mb-3 md:mb-0">
         <DotPattern isDark={true} />
         <PhDGuidance />
       </div>
+
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
+        <DotPattern isDark={false} />
+        <AcademicEnrichment />
+      </div>
       
-      <div className="relative bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
         <DotPattern isDark={false} />
         <Responsibilities />
       </div>
       
-      <div className="relative bg-gray-900">
-        <DotPattern isDark={true} />
-        <Publications />
-      </div>
-      
-      <div className="relative bg-gray-100">
-        <DotPattern isDark={false} />
-        <Nptel />
-      </div>
-      
-      <div className="relative bg-gray-900">
-        <DotPattern isDark={true} />
-        <Awards />
-      </div>
-
-      <div className="relative bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
         <DotPattern isDark={false} />
         <Patents />
       </div>
       
-      <div className="relative bg-gray-100">
-        <DotPattern isDark={false} />
-        <AcademicEnrichment />
-      </div>
-
-      <div className="relative bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
         <DotPattern isDark={false} />
         <ProfessionalProfile />
       </div>
+
+      <div className="relative bg-gray-900 mb-3 md:mb-0">
+        <DotPattern isDark={true} />
+        <Publications />
+      </div>
       
-      <div className="bg-gray-100">
+      <div className="relative bg-gray-100 mb-3 md:mb-0">
+        <DotPattern isDark={false} />
+        <Nptel />
+      </div>
+      
+      <div className="relative bg-gray-900 mb-3 md:mb-0">
+        <DotPattern isDark={true} />
+        <Awards />
+      </div>
+      
+      <div className="bg-gray-100 mb-3 md:mb-0">
         <Contact />
       </div>
       
