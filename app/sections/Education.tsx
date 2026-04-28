@@ -55,7 +55,7 @@ const Education = () => {
           {educations.map((edu) => (
             <motion.div
               {...motionProps}
-              key={edu.id}
+              key={`education-${edu.id}`}
               className="bg-white/75 backdrop-blur-sm p-6 rounded-3xl shadow-md"
             >
               <div className="flex items-center mb-4">

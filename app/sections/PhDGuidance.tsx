@@ -111,7 +111,7 @@ const PhDGuidance = () => {
                   {scholars.map((scholar) => (
                     <motion.div
                       {...motionProps}
-                      key={scholar.id}
+                      key={`scholar-${scholar.id}`}
                       className="relative mb-6 last:mb-0"
                     >
                       <div className="hidden md:block absolute -left-6 lg:-left-8 top-4 w-5 h-5 rounded-full bg-white border-4 border-blue-400"></div>
@@ -161,7 +161,7 @@ const PhDGuidance = () => {
                 {phd.monograms.map((monogram, index) => (
                   <motion.li
                     {...motionProps}
-                    key={index}
+                    key={`${monogram}-${index}`}
                     className="flex items-start gap-4 rounded-2xl bg-gray-50 border border-gray-200 px-4 py-3"
                   >
                     <span className="min-w-8 h-8 rounded-full bg-blue-500 text-white text-sm font-semibold flex items-center justify-center shadow-sm">
