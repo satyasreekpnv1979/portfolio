@@ -95,8 +95,8 @@ const Patents = () => {
         <div className="md:hidden space-y-4">
           {patents.map((patent) => (
             <motion.div
+              key={`patent-${patent.id}`}
               {...motionProps}
-              key={patent.id}
               className="bg-white/75 backdrop-blur-sm p-4 rounded-xl shadow-lg mx-2"
             >
               <div className="flex flex-nowrap items-start gap-3 mb-3">

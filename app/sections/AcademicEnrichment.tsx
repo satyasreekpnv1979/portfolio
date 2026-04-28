@@ -240,8 +240,8 @@ const AcademicEnrichment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.coordinated.map((workshop) => (
               <motion.div
+                key={`coordinated-${workshop.id}`}
                 {...motionProps}
-                key={workshop.id}
                 className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
                 <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{workshop.title}</h4>
@@ -277,8 +277,8 @@ const AcademicEnrichment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
             {workshops.aicteProjects.map((project) => (
               <motion.div
+                key={`aicte-${project.id}`}
                 {...motionProps}
-                key={project.id}
                 className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
               >
                 <h4 className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{project.title}</h4>
@@ -306,8 +306,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.sttp.map((sttp) => (
                 <motion.div
+                  key={`sttp-${sttp.id}`}
                   {...motionProps}
-                  key={sttp.id}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{sttp.title}</h5>
@@ -324,8 +324,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.fdp.map((fdp) => (
                 <motion.div
+                  key={`fdp-${fdp.id}`}
                   {...motionProps}
-                  key={fdp.id}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{fdp.title}</h5>
@@ -342,8 +342,8 @@ const AcademicEnrichment = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {workshops.attended.atal.map((atal) => (
                 <motion.div
+                  key={`atal-${atal.id}`}
                   {...motionProps}
-                  key={atal.id}
                   className="bg-white/75 backdrop-blur-sm p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl shadow-lg mx-2 sm:mx-0"
                 >
                   <h5 className="text-sm sm:text-base md:text-lg font-semibold mb-2 sm:mb-3 text-gray-800 leading-tight">{atal.title}</h5>

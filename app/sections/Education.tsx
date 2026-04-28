@@ -54,8 +54,8 @@ const Education = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {educations.map((edu) => (
             <motion.div
-              {...motionProps}
               key={`education-${edu.id}`}
+              {...motionProps}
               className="bg-white/75 backdrop-blur-sm p-6 rounded-3xl shadow-md"
             >
               <div className="flex items-center mb-4">

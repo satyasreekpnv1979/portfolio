@@ -36,8 +36,8 @@ const Responsibilities = () => {
             <ul className="space-y-4">
               {responsibilities.map((responsibility, index) => (
                 <motion.li
+                  key={`resp-${index}`}
                   {...motionProps}
-                  key={index}
                   className="flex items-start"
                 >
                   <span className="text-blue-400 mr-3 mt-1.5">•</span>

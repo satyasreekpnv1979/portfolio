@@ -149,8 +149,8 @@ const Nptel = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
             <motion.div
+              key={`nptel-${course.id}`}
               {...motionProps}
-              key={course.id}
               className="bg-gray-800/75 backdrop-blur-sm rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-nowrap items-start gap-3 sm:gap-4">

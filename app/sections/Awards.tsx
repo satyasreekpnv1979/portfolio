@@ -152,8 +152,8 @@ const Awards = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {awards.map((award) => (
             <motion.div
+              key={`award-${award.id}`}
               {...motionProps}
-              key={award.id}
               className="bg-white/75 backdrop-blur-sm rounded-xl shadow-lg p-6 relative overflow-hidden group hover:shadow-xl transition-shadow"
             >
               <div className="relative z-10">

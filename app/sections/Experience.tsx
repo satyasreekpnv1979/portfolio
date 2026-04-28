@@ -68,8 +68,8 @@ const Experience = () => {
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
+                key={`exp-${exp.id}`}
                 {...motionProps}
-                key={exp.id}
                 className="relative"
               >
                 <div className={`md:flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
